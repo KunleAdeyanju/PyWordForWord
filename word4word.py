@@ -50,7 +50,7 @@ class file_analyzer():
         return ans
 
     def letterFrequency(self, word):
-        word_without = re.sub(r'[^a-zA-Z0-9]', ' ', word)
+        word_without = re.sub(r'[^a-zA-Z0-9]', '', word) # forgot to remove the spaces
         split_chars = list(word_without.lower())
         ans = {}
         for i in split_chars:
